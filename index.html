@@ -5,7 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Time</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    </head>
-    <body>
-        
-    </body>
+    <link rel="stylesheet" href="assests/style.css"
+</head>
+
+    <body class="flex-column min-100-vh">
+        <header class="hero">
+          <h1 class="app-title"><i class="fab fa-github"></i> Weather Time Dashboard!</h1>
+        </header>
+      
+      
+        <main class="flex-row justify-space-between">
+          <div class="col-12 col-md-4">
+      
+            <div class="card">
+              <h3 class="card-header text-uppercase">Search for a City</h3>
+              <form id="user-form" class="card-body">
+                <label class="form-label" for="username">City</label>
+                <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+                <button type="submit" class="btn">Search</button>
+              </form>
+            </div>
+      
+            <div class="card">
+              <div id="language-buttons" class="card-body">
+                <button data-language="austin" class="btn">Austin</button>
+                <button data-language="boston" class="btn">Boston</button>
+                <button data-language="chesapeake" class="btn">Chesapeake</button>
+                <button data-language="dallas" class="btn">Dallas</button>
+                <button data-language="lasvegas" class="btn">Las Vegas</button>
+                <button data-language="pittsburg" class="btn">Pittsburg</button>
+                <button data-language="sacramento" class="btn">Sacramento</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-8">
+            <h2 class="subtitle">Showing Weather for: <span id="repo-search-term"></span></h2>
+            <div id="repos-container" class="list-group"></div>
+          </div>
+        </main>
+      
+        <script src="assests/logic.js"></script>
+      </body>
+      
+      </html>
